@@ -1,0 +1,194 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    margin: 0;
+}
+.container{
+    height: 100vh;
+    background: rgba(237, 4, 4, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.756);
+}
+.bmi-left{
+    background: url("bmi-left.avif");
+    background-size: cover;
+    width: 40rem;
+    height: 25rem;
+    border-radius: 30px 0px 0px 30px;
+}
+.bmi-box{
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    padding: 36px;
+    background-color: rgba(232, 232, 232, 0.359);
+    backdrop-filter: blur(10px);
+    border-radius: 0px 30px 30px 0px;
+}
+.bmi-head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+    margin-bottom: 20px;
+}
+.bmi-head h2{
+    font-size: 24px;
+}
+.bmi-head hr{
+    width: 50%;
+    border-radius: 4px;
+    border: 2px solid rgba(0, 0, 0, 0.605);
+}
+.bmi-gender{
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+    align-items: center;
+    margin-top: 12px;
+}
+/* .bmi-gender > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 30%;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.934);
+} */
+/* .gender-male, .gender-female{
+    padding: 12px 18px;
+} */
+.bmi-age input{
+    width: 100%;
+    height: 42px;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.934);
+}
+.bmi-submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+}
+.bmi-submit input{
+    padding: 12px 0px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    background: rgba(237, 4, 4, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.35s;
+}
+.bmi-submit input:hover{
+    background: rgba(0, 0, 0, 0.605);
+    transform: scale(1.1);
+}
+.bmi-hw{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+    margin-top: 12px;
+}
+.bmi-hw >div{
+    display: flex;
+    justify-content: center;
+    border: none;
+    height: 42px;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.934);
+    width: 100%;
+}
+.bmi-h input, .bmi-w input{
+    border: none;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 16px;
+}
+.bmi-result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bmi-result h2 span{
+    background: white;
+    border-radius: 8px;
+    padding: 8px;
+}
+.resultArea{
+    display: none;
+    text-align: center;
+}
+
+
+/* Custom Radio Buttons */
+.radio-item [type="radio"] {
+	display: none;
+}
+.radio-item + .radio-item {
+	margin-top: 15px;
+}
+.radio-item label {
+	display: block;
+	padding: 20px 60px;
+	/* background: #1d1d42; */
+    background-color: rgba(255, 255, 255, 0.934);
+    /* rgba(200, 0, 255, 0.585) */
+	border: 2px solid rgba(255, 255, 255, 0.1);
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: 400;
+	white-space: nowrap;
+	position: relative;
+	transition: 0.4s ease-in-out 0s;
+}
+.radio-item label:after,
+.radio-item label:before {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+}
+.radio-item label:after {
+	height: 19px;
+	width: 19px;
+	/* border: 2px solid #524eee; */
+    border: 2px solid rgba(237, 4, 4, 0.5);
+	left: 19px;
+	top: calc(50% - 12px);
+}
+.radio-item label:before {
+	/* background: #524eee; */
+    background: rgba(237, 4, 4, 0.5);
+	height: 20px;
+	width: 20px;
+	left: 21px;
+	top: calc(50%-5px);
+	transform: scale(5);
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.4s ease-in-out 0s;
+}
+.radio-item [type="radio"]:checked ~ label {
+	/* border-color: #524eee; */
+    border-color: rgba(237, 4, 4, 0.5);
+}
+.radio-item [type="radio"]:checked ~ label::before {
+	opacity: 1;
+	visibility: visible;
+	transform: scale(1);
+}
